@@ -13,3 +13,9 @@ node_modules/
 
 # macos
 .DS_Store
+
+.idea
+.vscode
+config.json
+db/*
+!db/sample.members.json

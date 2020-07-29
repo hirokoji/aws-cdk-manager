@@ -1,4 +1,7 @@
-import { Hello } from './hello';
+#!/usr/bin/env node
 
-const hello = new Hello('World');
-hello.greeting();
+import {Cli} from "./Cli";
+
+const rootDirPath = __dirname + '/../';
+const cli = new Cli();
+cli.cli(process.argv);
