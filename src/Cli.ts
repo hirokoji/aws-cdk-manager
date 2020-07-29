@@ -1,20 +1,16 @@
-import { program }from 'commander';
+import { program } from 'commander';
 
-export class Cli{
+export class Cli {
+    constructor() {}
 
-    constructor() {
-    }
-
-    public cli = async (argv: any) => {
-
+    public cli = async (argv: any): Promise<void> => {
         program
             .command('list')
             .description('list greengrass group')
-            .action(async (cmd) => {
-                console.log('will list greengrass here')
+            .action(async cmd => {
+                console.log('will list greengrass here');
             });
 
         program.parse(argv);
-
     };
 }
